@@ -90,7 +90,7 @@
         </center>
           License: GraspIt! is available under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>.
           <br>
-          Version: The currently available version is 2.2.0 (released in April 2012). 
+          Version: The most recent released version is 2.2.0 (released in April 2012). This is the version that the documentation has last been updated for; however, some of the installation instructions for that version (especially with regard to installing dependencies) might no longer work. We are working towards a 3.0 release in the coming months; until that happens, we recommend using the latest source code version (see below for download), with the caveat that compiling it might take some self-guided effort.
           <br>
           Platform: GraspIt! is cross-platform, and has been tested on MS Windows and Ubuntu Linux. 
           <br>
@@ -129,128 +129,103 @@
           </center>
             <tr>
               <td colspan="2" rowspan="1"
-         style="vertical-align: top; width: 210px;">For an introduction to
-        GraspIt!, the most complete overview of its core features is in:<br>
-              <br>
-        &nbsp;&nbsp;&nbsp; * Andrew Miller and Peter K. Allen. "Graspit!: A
+         style="vertical-align: top; width: 210px;">
+        Andrew Miller and Peter K. Allen. "Graspit!: A
         Versatile Simulator for Robotic Grasping". IEEE Robotics and Automation
-        Magazine, V. 11, No.4, Dec. 2004, pp. 110-122. [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt_RA04-complete-system.pdf">pdf</a>].<br>
-              <br>
-        We recommend starting with that paper for the best introduction to the
+        Magazine, V. 11, No.4, Dec. 2004, pp. 110-122. We recommend starting with that paper for the best introduction to the
         system. Most of the papers below address individual features of the
         simulator, you can read those that are relevant to the particular
         project you are working on. The list of publication is presented in
         chronological order, from oldest to newest. For each publication, we
         also provide a short description of the parts of GraspIt! that it is
-        most relevant for.<br>
+        most relevant for. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt_RA04-complete-system.pdf">pdf</a>].<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Andrew T. Miller and Peter K. Allen. "Examples of
+        Andrew T. Miller and Peter K. Allen. "Examples of
         3D Grasp Quality Computations". In Proceedings IEEE International
         Conference on Robotics and Automation, Detroit, MI, pp. 1240-1246, May
-        1999. [<a href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA99-example-quality.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introductory theory on the grasp quality
+        1999. Introductory theory on the grasp quality
         metrics used by GraspIt!. Discussed topics such as the Grasp Wrench
-        Space, L1 and LInf norms, epsilon and volume quality metrics, etc.<br>
+        Space, L1 and LInf norms, epsilon and volume quality metrics, etc. [<a href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA99-example-quality.pdf">pdf</a>]<br>
         &nbsp;<br>
-        &nbsp;&nbsp;&nbsp; * Danica Kragic, Andrew T. Miller, Peter K. Allen.
+        Danica Kragic, Andrew T. Miller, Peter K. Allen.
         "Real-time tracking meets online grasp planning". In Proceedings IEEE
         International Conference on Robotics and Automation, Seoul, Republic of
-        Korea, pp. 2460-2465, May 2001. [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA01-tracking-planning.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application of GraspIt! to execute a
+        Korea, pp. 2460-2465, May 2001. Application of GraspIt! to execute a
         grasping task with a real robot. A real-life object is tracked using a
         camera, its position is replicated in GraspIt! where a grasp is planned
         using a virtual Barrett hand. The grasp is then executed using a real
-        Barrett hand.<br>
+        Barrett hand. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA01-tracking-planning.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Andrew T. Miller, Steffen Knoop, Peter K. Allen,
+        Andrew T. Miller, Steffen Knoop, Peter K. Allen,
         Henrik I. Christensen. "Automatic Grasp Planning Using Shape
         Primitives," In Proceedings of the IEEE International Conference on
-        Robotics and Automation, pp. 1824-1829, September 2003. [<a
+        Robotics and Automation, pp. 1824-1829, September 2003. Detailed discussion of the
+        Primitive-based grasp planner. [<a
          href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA03-primitive-planning.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Detailed discussion of the
-        Primitive-based grasp planner.<br>
-              <br>
-        &nbsp;&nbsp;&nbsp; * Andrew T. Miller, Henrik I. Christensen.
+        Andrew T. Miller, Henrik I. Christensen.
         "Implementation of Multi-rigid-body Dynamics within a Robotic Grasping
         Simulator" In Proceedings of the IEEE International Conference on
-        Robotics and Automation, pp. 2262 - 2268, September 2003. [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA03-dynamics.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Presents the theoretical framework
+        Robotics and Automation, pp. 2262 - 2268, September 2003. Presents the theoretical framework
         between the dynamics engine in GraspIt!. Covers topics such as time
         step integration, formulation of contact and joint constraints as
         Linear Complementarity constraints, etc. Shows how the full Linear
         Complementarity problem is assembled and solved at each time step of
-        the dynamic engine. A must-read for understanding GraspIt! dynamics.<br>
+        the dynamic engine. A must-read for understanding GraspIt! dynamics. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA03-dynamics.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Rafael Pelossof, Andrew Miller, Peter Allen and
+        Rafael Pelossof, Andrew Miller, Peter Allen and
         Tony Jebara. "An SVM Learning Approach to Robotic Grasping". In IEEE
         Int. Conf. on Robotics and Automation, New Orleans, April 29, 2004, pp.
-        3512-3518. [<a href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA04-SVM.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proposed the use of GraspIt! to generate
+        3512-3518. Proposed the use of GraspIt! to generate
         large amounts labeled grasping data that can be used to apply machine
         learning algorithms. This code is not included in the current GraspIt!
-        distribution.<br>
+        distribution. [<a href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA04-SVM.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Matei Ciocarlie, Claire Lackner and Peter Allen.
+        Matei Ciocarlie, Claire Lackner and Peter Allen.
         "Soft finger model with adaptive contact geometry for grasping and
         manipulation tasks". In IEEE Symposium on Haptic Interfaces for Virtual
-        Environment and Teleoperator Systems, Tsukuba, JP, March 19-21, 2007. [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-Haptics07-soft-fingers.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Discusses the Soft Finger contact as
+        Environment and Teleoperator Systems, Tsukuba, JP, March 19-21, 2007. Discusses the Soft Finger contact as
         implemented in GraspIt!, covering the analytical surface approximation,
         soft finger grasp wrench space and formulation as linear
-        complementarity constraints.<br>
+        complementarity constraints. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-Haptics07-soft-fingers.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Corey Goldfeder, Peter K. Allen, Claire Lackner,
+        Corey Goldfeder, Peter K. Allen, Claire Lackner,
         Raphael Pelossof. "Grasp Planning via Decomposition Trees". In IEEE
-        Int. Conference on Robotics and Automation, April 13, 2007, Rome. [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA07-decomposition.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Proposes an automatic method of
+        Int. Conference on Robotics and Automation, April 13, 2007, Rome. Proposes an automatic method of
         decomposing an object into primitives (superquadrics) to fully automate
         the task of primitive-based grasp planning. This code is not included
-        in the current GraspIt! distribution. <br>
+        in the current GraspIt! distribution. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA07-decomposition.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Matei Ciocarlie, Corey Goldfeder and Peter Allen.
+        Matei Ciocarlie, Corey Goldfeder and Peter Allen.
         "Dimensionality reduction for hand-independent dexterous robotic
         grasping". In IEEE / RSJ Conference on Intelligent Robots and Systems
-        (IROS) 2007, San Diego, Oct. 29 - Nov. 2 [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-IROS07-eigengrasps.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduces the eigengrasp concept and
+        (IROS) 2007, San Diego, Oct. 29 - Nov. 2. Introduces the eigengrasp concept and
         grasp planning in eigengrasp space as an optimization problem solved
         through Simulated Annealing. This is the recommended starting point if
-        you are interested in <br>
-        eigengrasps.<br>
+        you are interested in eigengrasps. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-IROS07-eigengrasps.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Matei T. Ciocarlie and Peter K. Allen. "On-Line
+        Matei T. Ciocarlie and Peter K. Allen. "On-Line
         Interactive Dexterous Grasping". In Eurohaptics 2008, Madrid, June
-        10-13, 2008. [<a href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-Haptics08-online.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Present an application of eigengrasp
+        10-13, 2008. Presents an application of eigengrasp
         planning for on-line interaction with a human user. This is the theory
-        behind the OnLinePlanner class included in the distribution.<br>
+        behind the OnLinePlanner class included in the distribution. [<a href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-Haptics08-online.pdf">pdf</a>]<br>
               <br>
-        &nbsp;&nbsp;&nbsp; * Corey Goldfeder, Matei Ciocarlie, Hao Dang and
+        Corey Goldfeder, Matei Ciocarlie, Hao Dang and
         Peter K. Allen. "The Columbia Grasp Database". In IEEE Int. Conf. on
-        Robotics and Automation 2009, Kobe. [<a
-         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA09-database.pdf">pdf</a>]<br>
-              <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shows how GraspIt! can be used to
+        Robotics and Automation 2009, Kobe. Shows how GraspIt! can be used to
         generate a huge database of labeled grasp data, and how this database
         can be used for data-driven grasp planning algorithms. The database is
         publicly available. We are currently working on releasing all the
         interface code that you need for using both GraspIt! and the Columbia
         Grasp Database together. We hope that this feature will be available in
-        the summer of 2009 at latest.<br>
+        the summer of 2009 at latest. [<a
+         href="http://www.cs.columbia.edu/~cmatei/graspit/pdf/GraspIt-ICRA09-database.pdf">pdf</a>]<br>
               </div>
             </div>
 
