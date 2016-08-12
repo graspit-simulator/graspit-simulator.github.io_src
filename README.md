@@ -16,7 +16,7 @@ Install prerequisites:
 sudo pip install sphinx
 ```
 
-Build new release from master, store into gh-pages branch:
+Build new release:
 
 ```
 make html
