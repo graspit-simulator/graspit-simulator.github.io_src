@@ -86,7 +86,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">GraspIt! Installation - Ubuntu Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#qt">Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#graspit">GraspIt!</a></li>
 </ul>
 </li>
@@ -276,43 +276,34 @@
             
   <div class="section" id="graspit-installation-ubuntu-linux">
 <h1>GraspIt! Installation - Ubuntu Linux<a class="headerlink" href="#graspit-installation-ubuntu-linux" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="qt">
-<h2>Qt<a class="headerlink" href="#qt" title="Permalink to this headline">¶</a></h2>
-<p>You will need the following libraries in order to compile GraspIt!:</p>
-<ul class="simple">
-<li>Qt 4</li>
-<li>Coin 3</li>
-<li>SoQt</li>
-<li>Blas and Lapack</li>
-<li>QHull</li>
-</ul>
-<p>On Ubuntu, you should be able to get all these from the package manager.
-It should also possible to compile them all from code, but since that
-tends to be system-specific we no longer provide instructions or
-guidelines for that.</p>
-<p>Use <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span></code> to install the following packages:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">libqt4-dev</span></code></li>
-<li><code class="docutils literal"><span class="pre">libqt4-opengl-dev</span></code></li>
-<li><code class="docutils literal"><span class="pre">libqt4-sql-psql</span></code></li>
-<li><code class="docutils literal"><span class="pre">libcoin60-dev</span></code></li>
-<li><code class="docutils literal"><span class="pre">libsoqt4-dev</span></code></li>
-<li><code class="docutils literal"><span class="pre">libblas-dev</span></code></li>
-<li><code class="docutils literal"><span class="pre">liblapack-dev</span></code></li>
-<li><code class="docutils literal"><span class="pre">libqhull-dev</span></code></li>
-</ul>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Install the following dependencies:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libqt4</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libqt4</span><span class="o">-</span><span class="n">opengl</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libqt4</span><span class="o">-</span><span class="n">sql</span><span class="o">-</span><span class="n">psql</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libcoin80</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libsoqt4</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libblas</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libqhull</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="graspit">
 <h2>GraspIt!<a class="headerlink" href="#graspit" title="Permalink to this headline">¶</a></h2>
-<p>Download and unzip the GraspIt! code itself. Set the following
-environment variable:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">GRASPIT</span></code> - the directory where you unzipped GraspIt!</li>
-</ul>
-<p>Create the GraspIt! Makefile from the Qt project file. Edit
-<code class="docutils literal"><span class="pre">$GRASPIT/graspit.pro</span></code> to suit your system and installation needs.
-Then type <code class="docutils literal"><span class="pre">qmake</span> <span class="pre">graspit.pro</span></code>.</p>
-<p>Build and go. From <code class="docutils literal"><span class="pre">$GRASPIT/</span></code> type <code class="docutils literal"><span class="pre">make</span></code>.</p>
+<p>Download GraspIt!</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">graspit</span><span class="o">-</span><span class="n">simulator</span><span class="o">/</span><span class="n">graspit</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Build GraspIt!</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>cd graspit
+export GRASPIT=$PWD
+mkdir build
+cd build
+cmake ..
+make -j5
+</pre></div>
+</div>
 </div>
 </div>
 
