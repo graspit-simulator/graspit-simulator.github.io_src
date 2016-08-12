@@ -193,9 +193,9 @@ Connecting to the CGDB:
 
 -  The Database menu gives you access to all CGDB functionality from
    GraspIt. The first step is to establish a connection to the CGDB,
-   using the Database :math:`\rightarrow` Connect and Browse menu. After
+   using the Database-> Connect and Browse menu. After
    a connection is established, you can use the other functions in the
-   Database menu as well. Click Database :math:`\rightarrow` Connect and
+   Database menu as well. Click Database->Connect and
    Browse to bring up the CGDB-Browser dialog.
 
 -  set the connection parameters based on PostgreSQL server that you are
@@ -298,7 +298,7 @@ To start, use the following steps:
 -  load a model from the CGDB. This will serve as the target object, the
    one that we will plan grasps on.
 
--  start the planner using the Database :math:`\rightarrow` Database
+-  start the planner using the Database->Database
    Planner menu.
 
 The CGDB Planner goes through a few steps, each with its own dedicated

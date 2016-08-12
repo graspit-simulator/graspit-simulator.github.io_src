@@ -5,11 +5,16 @@
 Getting Started
 ===============
 
-To get started, use the File :math:`\rightarrow` Open menu, and load the
+To get started, use the File->Open menu, and load the
 simulation world file ``dlr_flask.wld``. Note that by default GraspIt!
 will look for world files in ``$GRASPIT/worlds``. This is a very simple
 simulation world containing nothing except a hand (the DLR model) and an
 object (a flask).
+
+
+.. image:: _static/dlr_flask.png
+   :width: 100%
+
 
 In general, you can also start with an empty simulation world and
 populate it by importing robots and objects, one at a time, using the
@@ -27,9 +32,19 @@ vertical toolbar: this is the Inventor toolbar which is responsible for
 camera interaction.
 
 The first two buttons on the Inventor toolbar determine which state the
-viewer is in. When   is selected, the viewer is in **Interaction mode**.
+viewer is in. 
+
+.. image:: _static/arrowTool.jpg
+   :width: 10%
+
+**Interaction mode**.
 This is the only mode in which you can interact with the objects in the
-simulation world. When   is selected, the viewer is in **Camera mode**.
+simulation world. 
+
+.. image:: _static/handTool.jpg
+   :width: 10%
+
+**Camera mode**.
 This is the only mode in which you can move the camera.
 
 You can also toggle between **Interaction mode** and **Camera mode** by
@@ -52,12 +67,20 @@ in the following ways:
 
 In addition, the following buttons on the Inventor toolbar are useful:
 
--    - This automatically moves the camera so that the entire scene fits
-   in the viewer window;
 
--    - The seek tool allows you to click on an object in the scene.
-   After you click, the camera zooms in on the object, which also
-   becomes the center of rotation.
+.. image:: _static/viewAllTool.jpg
+   :width: 10%
+
+This automatically moves the camera so that the entire scene fits
+in the viewer window;
+
+
+.. image:: _static/seekTool.jpg
+   :width: 10%
+
+The seek tool allows you to click on an object in the scene.
+After you click, the camera zooms in on the object, which also
+becomes the center of rotation.
 
 Take a moment to move the camera around and familiarize yourself with
 its controls.
@@ -157,12 +180,12 @@ Grasp example
 
 Start by loading the simulation world ``dlr_flask.wld`` again, to make
 sure all the world elements are in their original positions. The use the
-menu Grasp :math:`\rightarrow` Auto Grasp. This will cause all the
+menu Grasp->Auto Grasp. This will cause all the
 fingers of the robot to flex (more details can be found in the ) until
 contact with the flask prevents all further motion. You now have a
 grasp.
 
-Use the Grasp :math:`\rightarrow` Quality Measures... menu to create a
+Use the Grasp->Quality Measures... menu to create a
 new quality measure that will be used on this grasp. By default, the
 quality measure dialog that appears will create a new quality measure
 called **New Quality Measure** of the **Epsilon** type using an L1 Grasp
@@ -171,7 +194,7 @@ measure, along with its value, will be displayed in the lower left part
 of the GraspIt! main window.
 
 You can also create a projection of the Grasp Wrench Space for this
-grasp. Use the Grasp :math:`\rightarrow` Create GWS Projection menu.
+grasp. Use the Grasp->Create GWS Projection menu.
 Then click the three checkboxes marked **tx, ty** and **tz** and click
 **OK**. GraspIt! will display the space of forces that this grasp can
 apply without a net torque. Note that if you change the camera in the
@@ -188,7 +211,7 @@ toolbar. Note that the robot joints move slightly and the glass slowly
 rolls on the table. The PD controllers in the robot joints are simply
 maintaining the current position against gravity.
 
-Use the Grasp :math:`\rightarrow` Auto Grasp menu to close the fingers
+Use the Grasp->Auto Grasp menu to close the fingers
 of the hand. Note that the hand starts closing, then lifts the glass
 into its grasp. After the grasp stabilizes, select the glass and change
 its material properties to ``frictionless``. The glass then slips out of

@@ -23,8 +23,8 @@ In order to create a grasp, you must load a hand and an object into a
 simulation world, then place them relative to each other and change the
 joint values of the hand until multiple contacts are formed. To
 facilitate this process, load the ``dlr_flask.wld`` world file provided
-with the GraspIt! distribution. Then use the Grasp :math:`\rightarrow`
-Auto Grasp menu command. This should result in multiple contacts, using
+with the GraspIt! distribution. Then use the Grasp->Auto Grasp menu 
+command. This should result in multiple contacts, using
 all the fingers as well as the palm. We will investigate the quality of
 the grasp in the following steps.
 
@@ -39,7 +39,7 @@ In GraspIt! a Quality Measure (QM) is more than just a number - it is an
 object that hangs around from the moment you create it until you dismiss
 it. At any point, you can ask a QM to update itself and provide you the
 computed quality value. You can access this functionality through the
-Grasp :math:`\rightarrow` Quality measures menu. The Quality measures
+Grasp->Quality measures menu. The Quality measures
 window allows you to:
 
 -  create a new Quality Measure, and assign it:
@@ -85,7 +85,7 @@ From a code standpoint, quality measures are organized as follows:
 
 In general, a GWS is a 6-dimensional convex polyhedron. As such, it can
 not be visualized directly. However, GraspIt! allows you to view 3D
-projections of a GWS. Use the Grasp :math:`\rightarrow` Create GWS
+projections of a GWS. Use the Grasp->Create GWS
 Projection menu for that. You will need to choose which 3D are fixed
 (used for projection). Note that a GWS (and its projections) are
 independent from Quality Measures - you do not need a QM to visualize a

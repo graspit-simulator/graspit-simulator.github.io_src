@@ -47,8 +47,7 @@ An Eigengrasp-based planner is composed of three things:
 
 -  an optimization method (usually Simulated Annealing)
 
-To start, load a hand and an object model, then use the Grasp
-:math:`\rightarrow` EigenGrasp Planner menu. The Eigengrasp Planning
+To start, load a hand and an object model, then use the Grasp->EigenGrasp Planner menu. The Eigengrasp Planning
 dialog window appears. The left side of the window is dedicated to the
 variables that are searched. The right hand side is dedicated to the
 planning process itself, allowing you to choose from multiple types of
@@ -177,8 +176,7 @@ Practical example: the Simulated Annealing planner
 
 -  load the ``flask.iv``
 
--  fire up the EigenGrasp planner dialog (Grasp :math:`\rightarrow`
-   EigenGrasp Planner menu)
+-  fire up the EigenGrasp planner dialog (Grasp->EigenGrasp Planner menu)
 
 -  select ``Axis-angle`` as ``Space Search Type``
 

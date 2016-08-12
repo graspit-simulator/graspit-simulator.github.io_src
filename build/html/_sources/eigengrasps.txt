@@ -122,7 +122,7 @@ Using eigengrasps
 -----------------
 
 With the desired hand highlighted in the hand drop-down list, use the
-Grasp :math:`\rightarrow` EigenGrasp Interface menu. Two windows will
+Grasp->EigenGrasp Interface menu. Two windows will
 show up: the eigengrasp amplitude sliders window and the eigengrasp
 options window. If no eigengrasp information has been loaded from a
 file, the system will display the trivial eigengrasp set, where each

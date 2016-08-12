@@ -47,8 +47,7 @@ been set. For a quick demo, see the Getting started chapter of this
 manual.
 
 Currently, the only way for a user to specify a desired position for a
-robot in dynamics mode is to use the AutoGrasp feature. Use the Grasp
-:math:`\rightarrow` Auto Grasp menu just as you would in statics. When
+robot in dynamics mode is to use the AutoGrasp feature. Use the Grasp->Auto Grasp menu just as you would in statics. When
 dynamics are on, this will set the robot desired DOF values at either
 the DOF max or min, depending on the default velocity specified in the
 robot configuration file. In the future, we intend to provide an

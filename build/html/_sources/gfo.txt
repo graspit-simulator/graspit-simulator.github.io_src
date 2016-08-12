@@ -46,8 +46,7 @@ GFO computations through the main interface
 A subset of the GFO functionality is available through a simple dialog
 accessible from the GraspIt GUI. You can use this anytime you have a
 grasp - for example, load the example world file ``dlr_flask.xml`` and
-then click Grasp :math:`\rightarrow` Auto Grasp. You can now use Grasp
-:math:`\rightarrow` Grasp Force Optimization to access the GFO dialog.
+then click Grasp->Auto Grasp. You can now use Grasp->Grasp Force Optimization to access the GFO dialog.
 
 The drop-down list allows you to choose the optimization type being
 performed. The main options are:

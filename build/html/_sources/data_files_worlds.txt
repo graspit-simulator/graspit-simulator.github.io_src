@@ -11,10 +11,10 @@ world and describes the format of a world file, which stores the current
 state of the world.
 
 When GraspIt! begins the world is empty. The user may either load a
-previously saved world by choosing File :math:`\rightarrow` Open, or
+previously saved world by choosing File->Open, or
 populate the new world. To import an obstacle (a static body) or an
-object (a dynamic body), use File :math:`\rightarrow` Import Obstacle or
-File :math:`\rightarrow` Import Object, and then choose the Body file
+object (a dynamic body), use File->Import Obstacle or
+File->Import Object, and then choose the Body file
 (see the previous section on bodies). Note that any Body file
 (regardless of whether it’s meant for a static or dynamic body) can be
 loaded as an obstacle (GraspIt! will just ignore the dynamic
@@ -24,7 +24,7 @@ also try to find the dynamic parameters in the body file and, if it can
 not find them, assign default values. Be aware that the default values
 occasionally have unpredictable results.
 
-To import a robot, use File :math:`\rightarrow` Import Robot, open the
+To import a robot, use File->Import Robot, open the
 correct robot folder, and select the robot configuration (.xml) file.
 
 To delete a body, select it, and then press the ``<DELETE>`` key. To

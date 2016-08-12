@@ -276,11 +276,12 @@
             
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<p>To get started, use the File <span class="math">\rightarrow</span> Open menu, and load the
+<p>To get started, use the File-&gt;Open menu, and load the
 simulation world file <code class="docutils literal"><span class="pre">dlr_flask.wld</span></code>. Note that by default GraspIt!
 will look for world files in <code class="docutils literal"><span class="pre">$GRASPIT/worlds</span></code>. This is a very simple
 simulation world containing nothing except a hand (the DLR model) and an
 object (a flask).</p>
+<a class="reference internal image-reference" href="_images/dlr_flask.png"><img alt="_images/dlr_flask.png" src="_images/dlr_flask.png" style="width: 100%;" /></a>
 <p>In general, you can also start with an empty simulation world and
 populate it by importing robots and objects, one at a time, using the
 Import options in the File menu. You can then save a simulation world
@@ -294,9 +295,13 @@ viewer, which renders the virtual world. On the right side there is a
 vertical toolbar: this is the Inventor toolbar which is responsible for
 camera interaction.</p>
 <p>The first two buttons on the Inventor toolbar determine which state the
-viewer is in. When &nbsp; is selected, the viewer is in <strong>Interaction mode</strong>.
+viewer is in.</p>
+<a class="reference internal image-reference" href="_images/arrowTool.jpg"><img alt="_images/arrowTool.jpg" src="_images/arrowTool.jpg" style="width: 10%;" /></a>
+<p><strong>Interaction mode</strong>.
 This is the only mode in which you can interact with the objects in the
-simulation world. When &nbsp; is selected, the viewer is in <strong>Camera mode</strong>.
+simulation world.</p>
+<a class="reference internal image-reference" href="_images/handTool.jpg"><img alt="_images/handTool.jpg" src="_images/handTool.jpg" style="width: 10%;" /></a>
+<p><strong>Camera mode</strong>.
 This is the only mode in which you can move the camera.</p>
 <p>You can also toggle between <strong>Interaction mode</strong> and <strong>Camera mode</strong> by
 pressing the <code class="docutils literal"><span class="pre">&lt;ESC&gt;</span></code> or <code class="docutils literal"><span class="pre">&lt;ALT&gt;</span></code> keys, although this seems not to
@@ -313,13 +318,13 @@ drag; alternatively, hold down the middle mouse button and drag;</li>
 rotate the wheel on a wheel mouse.</li>
 </ul>
 <p>In addition, the following buttons on the Inventor toolbar are useful:</p>
-<ul class="simple">
-<li>&nbsp; - This automatically moves the camera so that the entire scene fits
-in the viewer window;</li>
-<li>&nbsp; - The seek tool allows you to click on an object in the scene.
+<a class="reference internal image-reference" href="_images/viewAllTool.jpg"><img alt="_images/viewAllTool.jpg" src="_images/viewAllTool.jpg" style="width: 10%;" /></a>
+<p>This automatically moves the camera so that the entire scene fits
+in the viewer window;</p>
+<a class="reference internal image-reference" href="_images/seekTool.jpg"><img alt="_images/seekTool.jpg" src="_images/seekTool.jpg" style="width: 10%;" /></a>
+<p>The seek tool allows you to click on an object in the scene.
 After you click, the camera zooms in on the object, which also
-becomes the center of rotation.</li>
-</ul>
+becomes the center of rotation.</p>
 <p>Take a moment to move the camera around and familiarize yourself with
 its controls.</p>
 </div>
@@ -404,11 +409,11 @@ contact changes as well.</p>
 <h2>Grasp example<a class="headerlink" href="#grasp-example" title="Permalink to this headline">¶</a></h2>
 <p>Start by loading the simulation world <code class="docutils literal"><span class="pre">dlr_flask.wld</span></code> again, to make
 sure all the world elements are in their original positions. The use the
-menu Grasp <span class="math">\rightarrow</span> Auto Grasp. This will cause all the
+menu Grasp-&gt;Auto Grasp. This will cause all the
 fingers of the robot to flex (more details can be found in the ) until
 contact with the flask prevents all further motion. You now have a
 grasp.</p>
-<p>Use the Grasp <span class="math">\rightarrow</span> Quality Measures... menu to create a
+<p>Use the Grasp-&gt;Quality Measures... menu to create a
 new quality measure that will be used on this grasp. By default, the
 quality measure dialog that appears will create a new quality measure
 called <strong>New Quality Measure</strong> of the <strong>Epsilon</strong> type using an L1 Grasp
@@ -416,7 +421,7 @@ Wrench Space. Click <strong>Add/Edit</strong>, and then click <strong>OK</strong
 measure, along with its value, will be displayed in the lower left part
 of the GraspIt! main window.</p>
 <p>You can also create a projection of the Grasp Wrench Space for this
-grasp. Use the Grasp <span class="math">\rightarrow</span> Create GWS Projection menu.
+grasp. Use the Grasp-&gt;Create GWS Projection menu.
 Then click the three checkboxes marked <strong>tx, ty</strong> and <strong>tz</strong> and click
 <strong>OK</strong>. GraspIt! will display the space of forces that this grasp can
 apply without a net torque. Note that if you change the camera in the
@@ -431,7 +436,7 @@ start the dynamics engine by pressing the &nbsp; button on the Dynamics
 toolbar. Note that the robot joints move slightly and the glass slowly
 rolls on the table. The PD controllers in the robot joints are simply
 maintaining the current position against gravity.</p>
-<p>Use the Grasp <span class="math">\rightarrow</span> Auto Grasp menu to close the fingers
+<p>Use the Grasp-&gt;Auto Grasp menu to close the fingers
 of the hand. Note that the hand starts closing, then lifts the glass
 into its grasp. After the grasp stabilizes, select the glass and change
 its material properties to <code class="docutils literal"><span class="pre">frictionless</span></code>. The glass then slips out of

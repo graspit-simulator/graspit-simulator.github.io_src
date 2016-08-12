@@ -45,8 +45,7 @@ than presented here.
 The Primitive-based Grasp Planner
 ---------------------------------
 
-The Primitive-based Planner is accessible via the Grasp
-:math:`\rightarrow` Planner menu. It has a couple of restrictions: it
+The Primitive-based Planner is accessible via the Grasp->Planner menu. It has a couple of restrictions: it
 only works on the Barrett hand, and only if the user also supplies a
 primitive approximation of the object to be grasped. When the Planner
 dialog is opened, GraspIt! will attempt to load the primitive version of
