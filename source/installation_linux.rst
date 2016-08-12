@@ -21,23 +21,18 @@ It should also possible to compile them all from code, but since that
 tends to be system-specific we no longer provide instructions or
 guidelines for that.
 
-Use ``sudo apt-get install`` to install the following packages:
+Install the following dependencies:
 
--  ``libqt4-dev``
+.. code::
 
--  ``libqt4-opengl-dev``
+  sudo apt-get install libqt4-dev
+  sudo apt-get install libqt4-opengl-dev
+  sudo apt-get install libqt4-sql-psql
+  sudo apt-get install libcoin80-dev
+  sudo apt-get install libsoqt4-dev
+  sudo apt-get install libblas-dev
+  sudo apt-get install libqhull-dev
 
--  ``libqt4-sql-psql``
-
--  ``libcoin60-dev``
-
--  ``libsoqt4-dev``
-
--  ``libblas-dev``
-
--  ``liblapack-dev``
-
--  ``libqhull-dev``
 
 GraspIt!
 ~~~~~~~~
