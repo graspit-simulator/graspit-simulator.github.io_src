@@ -37,13 +37,20 @@ Install the following dependencies:
 GraspIt!
 ~~~~~~~~
 
-Download and unzip the GraspIt! code itself. Set the following
-environment variable:
+Download GraspIt!
 
--  ``GRASPIT`` - the directory where you unzipped GraspIt!
+.. code::
 
-Create the GraspIt! Makefile from the Qt project file. Edit
-``$GRASPIT/graspit.pro`` to suit your system and installation needs.
-Then type ``qmake graspit.pro``.
+  git clone git@github.com:graspit-simulator/graspit.git
+  
+Build GraspIt!
 
-Build and go. From ``$GRASPIT/`` type ``make``.
+.. code::
+
+  cd graspit
+  export GRASPIT=$PWD
+  mkdir build 
+  cd build 
+  cmake ..
+  make -j5
+  
