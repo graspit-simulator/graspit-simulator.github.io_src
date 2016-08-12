@@ -1,0 +1,13 @@
+Main Data Types and Data Files
+==============================
+
+There are three main types of entities in GraspIt!. The first one is a
+**Body**, which is characterized by having some geometry (a shape), a
+transform (its position) and material properties (such as friction
+coefficient). The second one is a **Robot**, which is comprised of
+multiple Bodies (such as its links) as well as information on
+kinematics, actuation, etc. Finally, a **World** groups together
+instances of the other classes and places them in the correct positions
+relative to each other. Each of these classes has its own data file
+format, which GraspIt! can load (but, with the exception of the World,
+not save to). We will detail all of them in this section.

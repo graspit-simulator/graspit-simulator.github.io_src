@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Grasp Planning II - Eigengrasp planning &mdash; GraspIt! User Manual 2.2 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="GraspIt! User Manual 2.2 documentation" href="index.html"/>
+        <link rel="next" title="Joint Coupling and Underactuated Hands" href="joint_coupling.html"/>
+        <link rel="prev" title="Eigengrasps" href="eigengrasps.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home">
+        
+
+          GraspIt! Manual
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-graspit-is">What GraspIt! is</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-graspit-is-not">What GraspIt! is NOT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#about-this-manual">About this manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#troubleshooting-and-contact">Troubleshooting and contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#authors-and-acknowledgements">Authors and acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_linux.html">GraspIt! Installation - Ubuntu Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation_linux.html#qt">Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_linux.html#graspit">GraspIt!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation_windows.html">GraspIt! Installation - Windows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation_windows.html#qt">Qt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_windows.html#coin3d">Coin3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_windows.html#soqt">SoQt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_windows.html#lapack">Lapack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_windows.html#dlfcn">Dlfcn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation_windows.html#graspit">GraspIt!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation_ros.html">GraspIt! Installation - Ubuntu Linux with ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#the-main-window-and-controls">The main window and controls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting_started.html#the-camera-mode">The Camera mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting_started.html#the-interaction-mode">The Interaction mode</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#grasp-example">Grasp example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#dynamics-example">Dynamics example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#the-menus">The menus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_files.html">Main Data Types and Data Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_files_bodies.html">Bodies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_files_bodies.html#body-files">Body Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_files_robots.html">Robots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_files_robots.html#degrees-of-freedom">Degrees of Freedom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_files_robots.html#kinematic-chains">Kinematic Chains</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_files_worlds.html">Worlds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_files_worlds.html#data-files-from-previous-versions-of-graspit">Data files from previous versions of GraspIt!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collision.html">Collision and Contact Detection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collision.html#contacts">Contacts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collision.html#software-implementation">Software implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collision.html#under-development-multi-threading">Under development: Multi-threading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collision.html#under-development-object-cloning">Under development: Object cloning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="soft_fingers.html">Soft Fingers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="soft_fingers.html#analytical-contact-area-model">Analytical contact area model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_quality.html">Grasp Quality Metrics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grasp_quality.html#grasp-wrench-space-metrics">Grasp Wrench Space metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grasp_quality.html#under-development-grasp-force-optimization">Under development: Grasp Force Optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gfo.html">Grasp Force Optimization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gfo.html#gfo-computations-through-the-main-interface">GFO computations through the main interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gfo.html#gfo-code-and-advanced-details">GFO code and advanced details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_planning.html">Grasp Planning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grasp_planning.html#general-concepts-and-planner-types">General concepts and planner types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grasp_planning.html#the-primitive-based-grasp-planner">The Primitive-based Grasp Planner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dynamics.html">The Dynamics Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#user-interaction-in-dynamics-mode">User interaction in dynamics mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#dof-controllers">DOF controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html#under-development-dynamics-improvements">Under development: dynamics improvements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eigengrasps.html">Eigengrasps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eigengrasps.html#loading-eigengrasp-information">Loading Eigengrasp Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eigengrasps.html#using-eigengrasps">Using eigengrasps</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Grasp Planning II - Eigengrasp planning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#grasp-planning-in-eigengrasp-space">Grasp planning in Eigengrasp space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-energy">Search energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimization-method-and-planner-types">Optimization method and planner types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#practical-example-the-simulated-annealing-planner">Practical example: the Simulated Annealing planner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#practical-example-the-multithreaded-planner">Practical example: the Multithreaded planner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="joint_coupling.html">Joint Coupling and Underactuated Hands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="joint_coupling.html#rigid-coupling">Rigid coupling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="joint_coupling.html#breakaway-transmission">Breakaway transmission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="joint_coupling.html#under-development-compliant-joints">Under development: compliant joints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matlab.html">Matlab interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="matlab.html#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab.html#one-time-step">One time step</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware connections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#barrett-hand">Barrett Hand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#flock-of-birds">Flock of Birds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#cyberglove">Cyberglove</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cgdb.html">The Columbia Grasp Database - Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#caveats">Caveats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#database-installation">Database installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#graspit-interface-installation">GraspIt Interface Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cgdb.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgdb.html#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#connecting-to-and-browsing-the-database">Connecting to and browsing the database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#geometric-similarity">Geometric similarity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb.html#database-backed-grasp-planning">Database-backed grasp planning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cgdb_in_depth.html">The Columbia Grasp Database: Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#d-models">3D Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-models">Adding new models</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#robotic-hands">Robotic Hands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-hands">Adding new hands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#grasps">Grasps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-grasp-sources">Adding new grasp sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-grasps">Adding new grasps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#neighbors">Neighbors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-distance-functions">Adding new distance functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-neighbors">Adding new neighbors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#alignments">Alignments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-alignment-methods">Adding new alignment methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgdb_in_depth.html#adding-new-alignments">Adding new alignments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cgdb_in_depth.html#stored-procedures">Stored Procedures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications and References</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">GraspIt! User Manual</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+
+        <div class="header-override">
+	  <center>
+          <a href="http://graspit-simulator.github.io"><img src="_static/logo.jpg"></a>
+	  </center>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Grasp Planning II - Eigengrasp planning</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/graspit-simulator/graspit-simulator.github.io/blob/master/source/grasp_planning_eg.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="grasp-planning-ii-eigengrasp-planning">
+<h1>Grasp Planning II - Eigengrasp planning<a class="headerlink" href="#grasp-planning-ii-eigengrasp-planning" title="Permalink to this headline">¶</a></h1>
+<p>This chapter described the grasp planners that run in Eigengrasp space.
+Unfortunately, they do not share the same framework as the
+Primitive-based planner described earlier, although from a software
+engineering viewpoint they probably should, as they are still rooted in
+the same try-many-grasps concept.</p>
+<p>Most of the ideas behind these planners are explained in a lot of detail
+in the . We strongly recommend reading the Eigengrasp related papers
+that can be found there before proceeding through this chapter, they
+will make most of the concepts shown here much clearer.</p>
+<div class="section" id="grasp-planning-in-eigengrasp-space">
+<h2>Grasp planning in Eigengrasp space<a class="headerlink" href="#grasp-planning-in-eigengrasp-space" title="Permalink to this headline">¶</a></h2>
+<p>In this family of planners, the task of grasp planning is seen as a
+search over multiple variables, or as an optimization problem for a
+high-dimensional function. The variables define the grasp and the
+optimized function is the quality of the grasp. In general, in order to
+define a grasp we need two sets of variables: the intrinsic variables
+(to define hand DOF’s) and the extrinsic variables, to define the
+position of the hand relative to the target object.</p>
+<p>For dexterous hands, if we consider one variable for each DOF, the space
+is too high-dimensional to search efficiently. That is why most of these
+algorithms only work well in eigengrasp space, where the intrinsic
+variables are the eigengrasp amplitudes. However, there is nothing in
+the structure of these planners that prevents them from running in DOF
+space. In fact, if you load a hand model that does not have Eigengrasps
+defined, GraspIt! will automatically define the “identity” eigengrasp
+set, with one eigengrasp corresponding to each DOF. You can then run all
+Eigengrasp-based planners exactly as you would if “real” Eigengrasps
+were defined.</p>
+<p>An Eigengrasp-based planner is composed of three things:</p>
+<ul class="simple">
+<li>a set of variables to search over</li>
+<li>a quality function to optimize over these variables (usually related
+in some way to grasp quality)</li>
+<li>an optimization method (usually Simulated Annealing)</li>
+</ul>
+<p>To start, load a hand and an object model, then use the Grasp
+<span class="math">\rightarrow</span> EigenGrasp Planner menu. The Eigengrasp Planning
+dialog window appears. The left side of the window is dedicated to the
+variables that are searched. The right hand side is dedicated to the
+planning process itself, allowing you to choose from multiple types of
+planners, see details about the current planning execution, etc.</p>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>All variables that are being searched are shown in the left panel of the
+dialog. Variables serve two main purposes: they define hand position and
+hand posture.</p>
+<ul class="simple">
+<li><strong>hand posture</strong> is defined using Eigengrasp amplitudes. As stated
+above, if the hand you are currently using does not have other
+Eigengrasps defined, the planner will just use the “identity”
+eigengrasp set. All Eigengrasp variables are shown in the dialog with
+the prefix <code class="docutils literal"><span class="pre">EG</span></code>.</li>
+<li><strong>hand position</strong> can be parameterized in many different ways. The
+drop down list <code class="docutils literal"><span class="pre">Type</span></code> offers a number of different parameterization
+options. When the selection in this drop-down list changes, you will
+see the list of variables change as well. For complete exhaustive
+searches, the default option is <code class="docutils literal"><span class="pre">Axis-angle</span></code>. In this case hand
+position is parameterized using 6 variables: 3 for translation and 3
+for rotation. The other ways of specifying hand position are more
+specialized; see code and for more details.</li>
+</ul>
+<p>In the GraspIt! code, a state comprising all the variables in search is
+contained in the <code class="docutils literal"><span class="pre">SearchState</span></code> class. Please consult the documentation
+of this class for many details about these variables, different ways to
+encode hand position, etc.</p>
+<p>Next to each variable, there is an <code class="docutils literal"><span class="pre">On</span></code> checkbox, which can be used to
+enable / disable search over a particular variable. If a variable is
+disabled (its box is unchecked), it is no longer part of the search, and
+will maintain its current value in all generated solutions. For each
+variable, there are also other options marked <code class="docutils literal"><span class="pre">Input</span></code>, <code class="docutils literal"><span class="pre">Target</span></code> and
+<code class="docutils literal"><span class="pre">Confidence</span></code>. These options are used for a very specialized planning
+operation, using external input. This type of planning is only described
+in one of the papers in the Publications section, and not in this
+manual. For more information, please contact us. In general, just ignore
+these options and leave them in the default configuration.</p>
+</div>
+<div class="section" id="search-energy">
+<h2>Search energy<a class="headerlink" href="#search-energy" title="Permalink to this headline">¶</a></h2>
+<p>The search energy is a way of assessing how good a state encountered
+during a search really is. It can also be considered a function of the
+search variables that needs to be optimized. The most straightforward
+search energy is the one that we have already seen used by the
+Primitive-based Grasp Planner: use a grasp Quality Measure. However, a
+traditional QM is only defined when the hand is actually in contact with
+the object. When planning in Eigengrasp space, many hand states will be
+very close, but not in perfect contact with the object. One possibility
+would be to use the AutoGrasp function and close the hand, and compute a
+QM for the resulting grasp. However, that is a slow process, and we
+would like to be able to evaluate more hand postures quickly. As a
+result, we have tried to define a number of implementations of the
+“Search Energy” concept that do not require hand-object contacts.</p>
+<p>The default energy function (pre-selected in the <code class="docutils literal"><span class="pre">Energy</span></code> formulation
+drop-down list) is <code class="docutils literal"><span class="pre">Hand</span> <span class="pre">Contacts</span></code>. This formulation attempts to bring
+all links of the hand as close as possible to the target object. The
+computation of this energy function can be greatly sped-up by
+pre-specifying “desired” contact locations on each link (see for
+details). This is the role of the checkbox <code class="docutils literal"><span class="pre">Preset</span> <span class="pre">contacts</span></code>. Such
+pre-defined contacts can be loaded from a file. For the Human and
+Barrett hands, pre-specified contact files are supplied with the
+distribution. If no contact file has already been loaded, when the
+<code class="docutils literal"><span class="pre">Preset</span> <span class="pre">contacts</span></code> checkbox is checked the system will ask the user to
+select a file to be loaded. Note that it is also possible to specify a
+pre-defined contacts file in a robot configuration file, so that it is
+always loaded together with the Robot. From a code standpoint, a
+pre-defined contact location is loaded into an instance of the
+<code class="docutils literal"><span class="pre">VirtualContact</span></code> class; see that class and its documentation for
+details.</p>
+<p>Other formulations for the search energy are also available, but many of
+them also incorporate the <code class="docutils literal"><span class="pre">Hand</span> <span class="pre">Contacts</span></code> formulation in one way or
+another. For the moment, the code implementing these formulations (the
+<code class="docutils literal"><span class="pre">SearchEnergy</span></code> class) is some of the ugliest in the GraspIt! codebase.
+We hope to change it soon, at which point we will also provide more
+documentation. For now, the most tested and trusted energy formulation
+is Hand Contacts described above.</p>
+</div>
+<div class="section" id="optimization-method-and-planner-types">
+<h2>Optimization method and planner types<a class="headerlink" href="#optimization-method-and-planner-types" title="Permalink to this headline">¶</a></h2>
+<p>The core optimization methods, that is at the base of all Eigengrasp
+planners, is Simulated Annealing. The most basic type of planning is to
+run a Simulated Annealing search using the Hand Contacts energy
+function, over all Eiegengrasp variables plus hand position
+parameterized as axis-angle. This is shown in the practical example
+below. From this, we have tried quite a number of variations on this
+theme.</p>
+<p>One in particular might prove useful, so it is also exemplified below:
+the MultiThreaded Planner. One of the shortcomings of the Hand Contacts
+energy function is that is does not guarantee form-closure: it will find
+states where the hand conforms to the shape of the object, but not
+necessarily form-closed. To fix this, the MultiThreaded planner runs an
+optimization exactly as before; however, whenever it finds a state that
+has a good value for the Hand Contacts energy function, it fires off a
+child thread which will search that area in more detail, by applying the
+<code class="docutils literal"><span class="pre">AutoGrasp</span></code> function and computing the exact Quality Measure that
+results. The MultiThreaded planner is your best bet if you need to find
+form-closed grasps of an arbitrary object with one of the dexterous
+hands in GraspIt!.</p>
+<p>From a code standpoint, the <code class="docutils literal"><span class="pre">EGPlanner</span></code> pure abstract class is the
+base for all of these planners: it contains the functionality for
+looping, computing a given hand energy formulation, saving the best
+solutions etc. The one thing that it does not know how to do is run an
+optimization algorithm. Its direct offspring, the <code class="docutils literal"><span class="pre">SimAnnPlanner</span></code>
+combines that framework with a Simulated Annealing optimization. To get
+started, check out the <code class="docutils literal"><span class="pre">EGPlanner</span></code> class for most details, and the
+<code class="docutils literal"><span class="pre">SimAnnPlanner</span></code> class for an example implementation of it. All other
+planners inherit from <code class="docutils literal"><span class="pre">EGPlanner</span></code>. The setup for this code is OK, but
+could still take quite a bit of improvement, which we hope to get to at
+some point.</p>
+</div>
+<div class="section" id="practical-example-the-simulated-annealing-planner">
+<h2>Practical example: the Simulated Annealing planner<a class="headerlink" href="#practical-example-the-simulated-annealing-planner" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>load the <code class="docutils literal"><span class="pre">HumanHand20DOF</span></code></li>
+<li>load the <code class="docutils literal"><span class="pre">flask.iv</span></code></li>
+<li>fire up the EigenGrasp planner dialog (Grasp <span class="math">\rightarrow</span>
+EigenGrasp Planner menu)</li>
+<li>select <code class="docutils literal"><span class="pre">Axis-angle</span></code> as <code class="docutils literal"><span class="pre">Space</span> <span class="pre">Search</span> <span class="pre">Type</span></code></li>
+<li>select <code class="docutils literal"><span class="pre">Hand</span> <span class="pre">Contacts</span></code> as <code class="docutils literal"><span class="pre">Energy</span> <span class="pre">formulation</span></code></li>
+<li>check the <code class="docutils literal"><span class="pre">Preset</span> <span class="pre">contacts</span></code> box. If prompted to select a contact
+file, select <code class="docutils literal"><span class="pre">all_18_contacts.vgr</span></code> ( should be found in
+<code class="docutils literal"><span class="pre">$GRASPIT/models/robots/humanHand/virtual</span></code> )</li>
+<li>select <code class="docutils literal"><span class="pre">Sim.</span> <span class="pre">Ann.</span></code> as <code class="docutils literal"><span class="pre">Planner</span> <span class="pre">Type</span></code></li>
+<li>set 70000 as <code class="docutils literal"><span class="pre">Max</span> <span class="pre">Steps</span></code></li>
+<li>click <code class="docutils literal"><span class="pre">Init</span></code></li>
+<li>click <code class="docutils literal"><span class="pre">&gt;</span></code></li>
+<li>allow the planner to run until finished.</li>
+<li>use the <code class="docutils literal"><span class="pre">Show</span> <span class="pre">Results</span></code> buttons ( <code class="docutils literal"><span class="pre">&lt;</span> <span class="pre">Best</span> <span class="pre">&gt;</span></code> ) to see the results.</li>
+</ul>
+</div>
+<div class="section" id="practical-example-the-multithreaded-planner">
+<h2>Practical example: the Multithreaded planner<a class="headerlink" href="#practical-example-the-multithreaded-planner" title="Permalink to this headline">¶</a></h2>
+<p>Not yet written... Coming soon...</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="joint_coupling.html" class="btn btn-neutral float-right" title="Joint Coupling and Underactuated Hands" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="eigengrasps.html" class="btn btn-neutral" title="Eigengrasps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright GNU Pulic License.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
