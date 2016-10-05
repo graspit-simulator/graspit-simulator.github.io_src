@@ -32,6 +32,11 @@ git push build master
 
 Troubleshooting:
 
+If you want to view changes locally, run:
+```
+python -m SimpleHTTPServer 8080
+```
+
 If you get complaints about .sty files install the following
 
 ```
