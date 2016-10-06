@@ -144,7 +144,7 @@ html_static_path = ['_static']
 html_context = {
   "display_github": True,
   "github_user": "graspit-simulator",
-  "github_repo": "graspit-simulator.github.io",
+  "github_repo": "graspit-simulator.github.io_src",
   "github_version": "master/source/",
   "conf_py_path": "",
   "source_suffix": source_suffix,

@@ -1,26 +1,20 @@
 GraspIt! Installation - Ubuntu Linux with ROS
 ---------------------------------------------
 
-GraspIt! is also available through a ROS stack, allowing you to either
-the GraspIt! binaries or compile the source code through the ROS
-installation mechanism. The ROS stack also provides examples of how to
-use ROS and GraspIt! together. For more details, please see the relevant
-stack documentation on the ROS wiki:
-
-In order to use newer GraspIt! versions use the graspit-ros package:
+GraspIt! can be integrated into a ros workspace via the graspit-ros package:
 
 https://github.com/graspit-simulator/graspit-ros
 
 .. code::
 
   cd ros_ws/src
-  git clone https://github.com/graspit-simulator/graspit-ros
+  git clone https://github.com/graspit-simulator/graspit-ros --recursive
   cd ..
   catkin_make
 
-This packages pulls in graspit as a git submodule.  You can then 
-write your own ros package to interact with graspIt!. 
+This packages pulls in GraspIt! as a git-submodule.  You can then 
+write your own code which will be both its own ros package and a GraspIt! plugin to allow interaction with GraspIt!. For examples of how to write a plugin look at the GraspIt! Plugins page from this user manual. 
 
-For example:
+For an example of a plugin exposing GraspIt! functionality via ROS services and action servers:
 
 https://github.com/curg/graspit_interface
