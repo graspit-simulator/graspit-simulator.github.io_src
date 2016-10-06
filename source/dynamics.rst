@@ -133,10 +133,7 @@ In order to use Bullet 2.83.7 with GraspIt! do the following:
    git checkout 2.83.7
    mkdir build
    cd build
-
    ccmake ..
-
-
 
 Set BUILD_SHARED_LIBS to ON
 
@@ -147,12 +144,14 @@ Set BUILD_SHARED_LIBS to ON
 
 
 2) Configure GraspIt!
+
 .. code::
    cd graspit/build
    ccmake ..
 
 Set DYNAMICS_ENGINE to BULLET_DYNAMICS
 3) Build GraspIt!
+
 .. code::
    cd graspit/build
    cmake ..
