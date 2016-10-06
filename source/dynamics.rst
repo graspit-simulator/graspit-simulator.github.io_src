@@ -124,9 +124,10 @@ it.
 Bullet Dynamics
 ----------------------------------------
 In order to use Bullet 2.83.7 with GraspIt! do the following:
+
 1) Install Bullet
 
-.. code-block:: bash
+.. code::
    git clone git@github.com:bulletphysics/bullet3.git
    cd bullet3 
    git checkout 2.83.7
@@ -139,23 +140,23 @@ In order to use Bullet 2.83.7 with GraspIt! do the following:
 
 Set BUILD_SHARED_LIBS to ON
 
-.. code-block:: bash
+.. code::
    cmake ..
    make -j5
    sudo make install
 
 
 2) Configure GraspIt!
-
-cd graspit/build
-ccmake ..
+.. code::
+   cd graspit/build
+   ccmake ..
 
 Set DYNAMICS_ENGINE to BULLET_DYNAMICS
 3) Build GraspIt!
-
-cd graspit/build
-cmake ..
-make -j5
+.. code::
+   cd graspit/build
+   cmake ..
+   make -j5
 
 
 4) Run GraspIt!
