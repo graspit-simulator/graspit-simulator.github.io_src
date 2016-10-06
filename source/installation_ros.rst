@@ -14,7 +14,7 @@ https://github.com/graspit-simulator/graspit-ros
 .. code::
 
   cd ros_ws/src
-  git clone https://github.com/graspit-simulator/graspit-ros
+  git clone https://github.com/graspit-simulator/graspit-ros --recursive
   cd ..
   catkin_make
 
