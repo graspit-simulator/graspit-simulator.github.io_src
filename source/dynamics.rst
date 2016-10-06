@@ -123,7 +123,7 @@ it.
 
 Bullet Dynamics
 ----------------------------------------
-In order to use Bullet 2.83.7 with GraspIt! do the following:
+Bullet Dynamics engine has been tested with GraspIt! on ubuntu 12.04 and 14.04. In order to use Bullet 2.83.7 with GraspIt! do the following:
 
 1) Install Bullet
 
