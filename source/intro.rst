@@ -110,7 +110,7 @@ Authors and acknowledgements
 **Andrew Miller** and **Matei Ciocarlie** are the main authors of
 GraspIt!, having designed most of its features and implemented most of
 the code. GraspIt!’s current main developers and maintainers are Matei
-Ciocarlie and **Jon Weisz**. The GraspIt! simulator was developed in the
+Ciocarlie, **Jake Varley** and **Jon Weisz**. The GraspIt! simulator was developed in the
 Robotics Lab, Department of Computer Science, Columbia University, under
 the guidance of **Prof. Peter Allen**.
 
@@ -126,7 +126,9 @@ implement the soft finger contact algorithms; **Corey Goldfeder**, who
 was the driving force behind the Columbia Grasp Database (CGDB) which is
 now integrated with GraspIt!; **Hao Dang** who wrote the GraspIt! - CGDB
 interface, and made many other valuable contributions to the codebase;
-**Norases Vesdapunt**, who wrote the XML interface for data files. We
+**Norases Vesdapunt**, who wrote the XML interface for data files. 
+**Jennifer Buehler** converted the build system from qmake to cmake 
+among other valuable contributions to the codebase. We
 would like to thank all of them for their valuable contributions.
 
 Thanks to Prof. Gerd Hirzinger and Dr. Max Fischer, Prof. Contantinos
