@@ -26,6 +26,7 @@ GraspIt! User Manual
    eigengrasps
    grasp_planning_eg
    joint_coupling
+   plugins
    matlab
    hardware
    cgdb
