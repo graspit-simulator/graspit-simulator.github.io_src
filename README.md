@@ -21,12 +21,16 @@ Build new release:
 ```
 git clone git@github.com:graspit-simulator/graspit-simulator.github.io_src.git
 make whatever changes to the source that you would like
+git add source
+git commit -m "new source"
+git push origin master
+
 make html
-git remote add build git@github.com:graspit-simulator/graspit-simulator.github.io.git
 rm -rf source 
 git rm -r source 
 git add build
 git commit -m "new build"
+git remote add build git@github.com:graspit-simulator/graspit-simulator.github.io.git
 git push build master --force
 ```
 
