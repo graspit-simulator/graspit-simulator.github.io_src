@@ -27,7 +27,7 @@ rm -rf source
 git rm -r source 
 git add build
 git commit -a "new build"
-git push build master
+git push build master --force
 ```
 
 Troubleshooting:
