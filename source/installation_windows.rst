@@ -104,7 +104,8 @@ This is very straight forward with cmake. Clone `the bullet repository`_ and bui
 
 .. _the bullet repository: https://github.com/bulletphysics/bullet3
 
-###Step 5. Compile graspit
+Step 5. Compile GraspIt!
+~~~~~~~~~~~~~~~~~~~~~~~
 
 For compiling with CMake, the path to the **MSYS bash.exe** needs to be passed to cmake.
 This is required for cmake to be able to call *soqt-config* (which is not provided as Windows .exe file and needs to be run via bash).     
