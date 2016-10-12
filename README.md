@@ -26,7 +26,7 @@ git remote add build git@github.com:graspit-simulator/graspit-simulator.github.i
 rm -rf source 
 git rm -r source 
 git add build
-git commit -a "new build"
+git commit -m "new build"
 git push build master --force
 ```
 
