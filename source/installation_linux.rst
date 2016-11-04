@@ -14,6 +14,7 @@ Install the following dependencies:
   sudo apt-get install libcoin80-dev
   sudo apt-get install libsoqt4-dev
   sudo apt-get install libblas-dev
+  sudo apt-get install liblapack-dev 
   sudo apt-get install libqhull-dev
 
 
