@@ -16,6 +16,7 @@ Install the following dependencies:
   sudo apt-get install libblas-dev
   sudo apt-get install liblapack-dev 
   sudo apt-get install libqhull-dev
+  sudo apt-get install libeigen3-dev
 
 
 GraspIt!
